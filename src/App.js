@@ -126,56 +126,25 @@ function App() {
   return (
     <div className="App">
       <header >
-        <h1 >  </h1>
       </header>
       <div>
        <AudioPlayerComponent autoplay={true} />
       </div>
       <div className="pigpic">
-        <div className="row">
-          <div className="button-holder-holder">
-            <div className="button-holder">
-              <Buttons />
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="balance-card">
-            <div className="balance-content">
-              <h2>Sats</h2>
-              <p>{balance}</p>
-            </div>
-          </div>
-          <div className="balance-card">
-            <div className="balance-content">
-                <h2>USD-BTC</h2>
-                <p>{price}</p>
-            </div>
-          </div>
+          <Buttons />
+        <div className="balance-card">
+          <p>{balance}</p>
+          <p>Sats</p>
         </div>
         <div className="row">
           <div className="row-item">
-            <div className="row-itemer">
-              <Transactions transactions={transactions} />
-            </div>
+            <Transactions transactions={transactions} />
           </div>
         </div>
       </div>
       <footer>
-        <h5>
-          <p><BitcoinBlockHeight /></p>
-          <p><TotalBTC /></p>
-          <p><BitcoinBlockReward /></p>
-          <p><BitcoinHashWin /></p>
-          <p className="right">
-            <BitcoinDifficulty />
-          </p>
-        </h5>
+
       </footer>
-      <div className="yessir">
-        <h3>
-        </h3>
-      </div>
     </div>
   );
 }
