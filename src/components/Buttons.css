@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'MyFontb';
+  src: url('BemirsDemoVersionRegular-L360Z.ttf') format('truetype');
+}
+
 label {
   padding-bottom: 2%;
 }
@@ -5,39 +10,41 @@ label {
 .buttons {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
 }
 
 .button {
-  background: linear-gradient(to right, rgba(9, 70, 238, 0.7) 0%, rgba(9, 70, 238, 1) 50%, rgba(9, 70, 238, 0.7) 100%);
-  border: 0px solid #3787FE;
+  background: linear-gradient(to top, rgba(214, 122, 0) 0%, rgba(251, 173, 7, 1) 50%, rgba(175, 80, 1) 100%);
+  border: 2px solid #000000;
   border-radius: 5px;
-  padding: 5px;
   font-size: 1.2rem;
-  font-family: 'MyFont';
   font-weight: bold;
-  width: 120px;
-  margin: 5px;
+  width: 110px;
+  margin-bottom: 275px;
+  margin-right: -75px;
   color: inherit;
   text-decoration: inherit;
   cursor: hand;
+  transform: rotate(90deg);
+  font-family: "MyFontb";
 }
 
 .a {
-  background: linear-gradient(to right, rgba(9, 70, 238, 0.7) 0%, rgba(9, 70, 238, 1) 50%, rgba(9, 70, 238, 0.7) 100%);
-  border: 0px solid #3787FE;
+  background: linear-gradient(to top, rgba(247, 10, 186) 0%, rgba(103, 14, 56, 1) 50%, rgb(65, 48, 24) 100%);
+  border: 2px solid #000000;
   border-radius: 5px;
-  padding: 5px;
   font-size: 1.2rem;
-  font-family: 'MyFont';
+  font-family: 'MyFontb';
   font-weight: bold;
-  width: 120px;
-  margin: 5px;
+  width: 105px;
+  margin-right: -35px;
+  margin-bottom: 275px;
   color: inherit;
   text-decoration: inherit;
   cursor: default;
   display: flex;
   justify-content: space-around;
+  transform: rotate(90deg);
 }
 
 .buttons button:hover {

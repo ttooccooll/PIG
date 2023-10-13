@@ -4,7 +4,6 @@ import Buttons from "./components/Buttons";
 import Transactions from "./components/Transactions";
 import axios from "axios";
 import "./App.css";
-import AudioPlayerComponent from './components/AudioPlayer';
 import BitcoinBlockHeight from './components/BlockHeight';
 import TotalBTC from './components/TotalBitcoin'
 import BitcoinDifficulty from './components/Difficulty'
@@ -125,26 +124,21 @@ function App() {
 
   return (
     <div className="App">
-      <header >
-      </header>
-      <div>
-       <AudioPlayerComponent autoplay={true} />
-      </div>
       <div className="pigpic">
-          <Buttons />
+        <h1>
+          Lucy's Piggie Bank
+        </h1>
         <div className="balance-card">
           <p>{balance}</p>
           <p>Sats</p>
         </div>
+        <Buttons />
         <div className="row">
           <div className="row-item">
             <Transactions transactions={transactions} />
           </div>
         </div>
       </div>
-      <footer>
-
-      </footer>
     </div>
   );
 }

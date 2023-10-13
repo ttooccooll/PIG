@@ -16,18 +16,6 @@ export const Buttons = () => {
   return (
     <div>
       <div className="buttons">
-        <button
-          className="button"
-          onClick={() => {
-            playMP3();
-            setModalState({
-              type: "send",
-              open: true,
-            });
-          }}
-        >
-          Send
-        </button>
 
         <button
           className="button"
@@ -39,7 +27,7 @@ export const Buttons = () => {
             });
           }}
         >
-          Receive
+          Finance
         </button>
 
         <a
@@ -49,7 +37,7 @@ export const Buttons = () => {
           rel="noopener noreferrer"
           onClick={playMP3}
         >
-          Status
+          Math
         </a>
 
       </div>
