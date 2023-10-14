@@ -46,11 +46,13 @@ section p {
 }
 
 .close-button {
-  cursor: crosshair;
+  cursor: pointer;
   text-align: end;
   font-family: 'MyFont';
-  font-size: large;
-  color: white;
+  font-size: 50px;
+  color: rgb(197, 255, 73);
+  padding: 0;
+  margin: 0;
 }
 
 .qr-code-container {

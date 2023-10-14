@@ -3,10 +3,16 @@
   src: url('Cookiemonster-gv11.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'MyFontz';
+  src: url('BalonkuRegular-la1w.otf') format('truetype');
+}
+
 p.t {
-  padding: 5px;
+  padding: 10px 15px 5px 5px;
   background: solid black;
   white-space: nowrap;
+  font-family: "MyFontz";
   font-size: 15px;
   font-weight: 100;
   margin-left: 5px;
@@ -15,7 +21,6 @@ p.t {
 .transaction-list {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;
 }
 
 .transaction {
@@ -28,6 +33,7 @@ p.t {
 .rosie {
   display: flex;
   flex-direction: row;
-  width: fit-content;
+  width: 110%;
   padding-right: 60px;
+  overflow-x: scroll;
 }
