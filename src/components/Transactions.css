@@ -3,23 +3,13 @@
   src: url('Cookiemonster-gv11.ttf') format('truetype');
 }
 
-h4.tr {
-  padding-left: 2%;
-  padding-top: .5%;
-  padding-bottom: .5%;
-  background: solid black;
-  white-space: nowrap;
-  font-size: small;
-}
-
 p.t {
-  padding-left: 2%;
-  padding-top: .5%;
-  padding-bottom: .5%;
+  padding: 5px;
   background: solid black;
   white-space: nowrap;
-  font-size: small;
+  font-size: 15px;
   font-weight: bold;
+  margin-right: 5px;
 }
 
 .transaction-list {
@@ -29,11 +19,15 @@ p.t {
 }
 
 .transaction {
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 5px;
   margin: 5px;
   display: inline-block;
-  min-width: 200px; /* Set a minimum width for each transaction element */
+  width: fit-content;
 }
 
-/* Add any additional styling you need */
+.rosie {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  padding-right: 30px;
+}

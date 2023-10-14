@@ -10,36 +10,32 @@ export const Transactions = ({ transactions }) => {
       day: "numeric",
       hour: "numeric",
       minute: "numeric",
-      second: "numeric",
-      hour12: false,
-    }).replace(/\//g, '.');
+    })
 
     if (tx.pending) return null;
 
-    if (tx.amount > 0) {
-      return (
-        <div key={tx.checking_id} className="transaction">
-          <p className="t">Inbound - {tx.bolt11.substring(0, 30)}</p>
-          <p className="t">+{tx.amount / 1000} satoshis</p>
-          <p className="t">{formattedDate}</p>
-        </div>
-      );
-    }
-
-    if (tx.amount < 0) {
-      return (
-        <div key={tx.checking_id} className="transaction">
-          <p className="t">Outbound - {tx.bolt11.substring(0, 30)}</p>
-          <p className="t">{tx.amount / 1000} satoshis</p>
-          <p className="t">Stardate {formattedDate}</p>
-        </div>
-      );
-    }
+    return (
+      <div key={tx.checking_id} className="rosie">
+        {tx.amount > 0 ? (
+          <>
+            <p className="t">Deposit - {tx.bolt11.substring(0, 30)}</p>
+            <p className="t">+{tx.amount / 1000} sats</p>
+            <p className="t">Date: {formattedDate}</p>
+          </>
+        ) : (
+          <>
+            <p className="t">Withdrawal - {tx.bolt11.substring(0, 30)}</p>
+            <p className="t">{tx.amount / 1000} sats</p>
+            <p className="t">Date: {formattedDate}</p>
+          </>
+        )}
+      </div>
+    );
   };
 
   return (
-    <div>
-      <h4 className="tr">Transactions</h4>
+    <div className="rosie">
+      <h4 >Transactions</h4>
       <div className="transaction-list">
         {transactions.map((transaction) => (
           <div key={transaction.checking_id} className="transaction">

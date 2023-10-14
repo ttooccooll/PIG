@@ -95,25 +95,28 @@ h1 {
 .row-item {
   background-color: #000000;
   border: 2px solid black;
-  border-radius: 20px;
-  height: 70px;
+  border-radius: 15px;
+  height: 60px;
   overflow: hidden;
   white-space: nowrap;
   margin: 200px 10px 5px 10px;
-  background: linear-gradient(to right, rgba(206, 151, 18, 0.7) 0%, rgba(206, 151, 18, 1) 50%, rgba(206, 151, 18, 0.7) 100%);
+  background: linear-gradient(to right, rgba(118, 54, 11, 0.5) 0%, rgba(206, 151, 18, .3) 50%, rgba(137, 55, 1, 0.5) 100%);
   position: relative;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   align-self: flex-end;
 }
 
 .row-item h4 {
   background: linear-gradient(to right, rgba(9, 70, 238, 0.7) 0%, rgba(9, 70, 238, 1) 50%, rgba(9, 70, 238, 0.7) 100%);
   border-radius: 20px;
-  padding-left: 3%;
   border: 3px solid #000000;
   margin-left: 10px;
-  margin-right: 10px;
-  width: 25%;
+  width: fit-content;
+  height: 20px;
+  align-self: center;
+  padding: 5px;
 }
 
 .row-item p {
@@ -121,8 +124,8 @@ h1 {
   background: linear-gradient(to right, rgba(212, 95, 16, 0.7) 0%, rgba(212, 95, 16, 1) 50%, rgba(212, 95, 16, 0.7) 100%);
   border-radius: 20px;
   border: 3px solid #000000;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: fit-content;
+  height: 20px;
 }
 
 .transaction .transaction-amount {
