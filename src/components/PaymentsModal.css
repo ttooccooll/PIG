@@ -9,18 +9,16 @@ form {
   flex-direction: column;
   text-align: center;
   font-family: 'MyFont';
-  background-color: black;
-  color: white;
+  font-size: larger;
+  color: fuchsia;
 }
 
 form {
   width: 100%;
-  background-color: black;
 }
 
 form .button {
   margin: 10% auto;
-  color: black;
 }
 
 form .button:hover{
@@ -31,8 +29,7 @@ section h6 {
   text-align: center;
   font-family: 'MyFont';
   font-size: large;
-  background-color: black;
-  color: white;
+  color: greenyellow;
   position: relative;
   display: flex;
   text-align: flex-start;

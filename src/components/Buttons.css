@@ -24,7 +24,6 @@ label {
   margin-right: -75px;
   color: inherit;
   text-decoration: inherit;
-  cursor: hand;
   transform: rotate(90deg);
   font-family: "MyFontb";
 }
@@ -41,23 +40,39 @@ label {
   margin-bottom: 275px;
   color: inherit;
   text-decoration: inherit;
-  cursor: default;
   display: flex;
   justify-content: space-around;
   transform: rotate(90deg);
 }
 
 .buttons button:hover {
-  cursor: default;
+  cursor: pointer;
   opacity: 0.6;
 }
 
 .buttons a:hover {
-  cursor: default;
+  cursor: pointer;
   opacity: 0.6;
 }
 
 @font-face {
   font-family: 'MyFont';
   src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+.buttonq {
+  background: linear-gradient(to top, rgb(109, 155, 101, 1) 0%, rgba(247, 10, 186, 1) 50%, rgb(82, 69, 222, 1) 100%);
+  border: 5px double linear-gradient(to right, rgb(221, 43, 43, 1) 0%, rgb(144, 247, 10, 1) 50%, rgb(69, 163, 222, 1) 100%);;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 100%;
+  color: burlywood;
+  text-decoration: dotted;
+  margin: 5px 0 5px 0;
+}
+
+.buttonq:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
