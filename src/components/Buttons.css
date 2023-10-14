@@ -19,9 +19,9 @@ label {
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-top: 200px;
+  margin-right: -80px;
   width: 110px;
-  margin-bottom: 275px;
-  margin-right: -75px;
   color: inherit;
   text-decoration: inherit;
   transform: rotate(90deg);
@@ -35,9 +35,10 @@ label {
   font-size: 1.2rem;
   font-family: 'MyFontb';
   font-weight: bold;
-  width: 105px;
-  margin-right: -35px;
-  margin-bottom: 275px;
+  margin-top: 190px;
+  margin-right: -40px;
+  width: 125px;
+  height: 30px;
   color: inherit;
   text-decoration: inherit;
   display: flex;

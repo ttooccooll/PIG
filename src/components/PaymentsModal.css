@@ -9,7 +9,7 @@ form {
   flex-direction: column;
   text-align: center;
   font-family: 'MyFont';
-  font-size: larger;
+  font-size: 25px;
   color: fuchsia;
 }
 
@@ -21,29 +21,26 @@ form .button {
   margin: 10% auto;
 }
 
-form .button:hover{
-opacity: .6;
-}
-
 section h6 {
   text-align: center;
   font-family: 'MyFont';
   font-size: large;
   color: greenyellow;
+  font-weight: 100;
+  font-size: 25px;
   position: relative;
   display: flex;
   text-align: flex-start;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 5px;
 }
 
 section p {
   word-wrap: break-word;
   font-family: 'MyFont';
-  font-size: 7px;
-  background-color: black;
-  color: white;
+  font-size: 17px;
+  color: orange;
   margin: 10px;
   position: relative;
 }
@@ -52,7 +49,7 @@ section p {
   cursor: crosshair;
   text-align: end;
   font-family: 'MyFont';
-  background-color: black;
+  font-size: large;
   color: white;
 }
 
@@ -60,6 +57,6 @@ section p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
+  color: rgb(25, 48, 149);
+  font-size: large;
 }

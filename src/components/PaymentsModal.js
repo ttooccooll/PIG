@@ -65,7 +65,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       isOpen={modalState.open}
       style={{
         content: {
-          top: "20%",
+          top: "10%",
           left: "40%",
           right: "40%",
           bottom: "auto",
@@ -103,7 +103,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
         <section>
           <h6>Invoice created</h6>
           <div className="qr-code-container">
-            <QRCode value={invoice} size={128} fgColor="#000" bgColor="#fff" />
+            <QRCode value={invoice} size={198} fgColor="aqua" bgColor="#brown" />
           </div>
           <p>{invoice}</p>
         </section>

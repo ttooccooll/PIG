@@ -48,7 +48,7 @@ function App() {
     axios
       .get("https://48f31a1603.d.voltageapp.io/api/v1/wallet", { headers })
       .then((res) => {
-        setBalance(res.data.balance / 1000);
+        setBalance(parseInt(res.data.balance / 1000));
       })
       .catch((err) => console.log(err));
   };
@@ -128,11 +128,13 @@ function App() {
         <h1>
           Lucy's Piggie Bank
         </h1>
+        <div className="row">
         <div className="balance-card">
-          <p>{balance}</p>
-          <p>Sats</p>
+          <p style={{ fontSize: '40px' }}>{balance}</p>
+          <p style={{ fontSize: '35px' }}>sats</p>
         </div>
         <Buttons />
+        </div>
         <div className="row">
           <div className="row-item">
             <Transactions transactions={transactions} />

@@ -8,14 +8,14 @@ p.t {
   background: solid black;
   white-space: nowrap;
   font-size: 15px;
-  font-weight: bold;
-  margin-right: 5px;
+  font-weight: 100;
+  margin-left: 5px;
 }
 
 .transaction-list {
   display: flex;
   flex-direction: row;
-  overflow-x: auto; /* Add this for horizontal scrolling if necessary */
+  overflow-x: scroll;
 }
 
 .transaction {
@@ -29,5 +29,5 @@ p.t {
   display: flex;
   flex-direction: row;
   width: fit-content;
-  padding-right: 30px;
+  padding-right: 60px;
 }
