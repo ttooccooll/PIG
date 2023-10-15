@@ -20,7 +20,7 @@ label {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 200px;
-  margin-right: -80px;
+  margin-right: -88px;
   width: 110px;
   color: inherit;
   text-decoration: inherit;
@@ -36,7 +36,25 @@ label {
   font-family: 'MyFontb';
   font-weight: bold;
   margin-top: 190px;
-  margin-right: -40px;
+  margin-right: -48px;
+  width: 125px;
+  height: 30px;
+  color: inherit;
+  text-decoration: inherit;
+  display: flex;
+  justify-content: space-around;
+  transform: rotate(90deg);
+}
+
+.b {
+  background: linear-gradient(to top, rgba(75, 116, 74) 0%, rgba(199, 210, 22) 50%, rgb(44, 81, 45) 100%);
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: 'MyFontb';
+  font-weight: bold;
+  margin-top: 190px;
+  margin-right: -90px;
   width: 125px;
   height: 30px;
   color: inherit;

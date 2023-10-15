@@ -17,6 +17,16 @@ export const Buttons = () => {
     <div>
       <div className="buttons">
 
+      <a
+          className="b"
+          href="https://www.pleblab.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={playMP3}
+        >
+          Latin
+        </a>
+
         <button
           className="button"
           onClick={() => {
