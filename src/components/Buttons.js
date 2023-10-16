@@ -16,8 +16,17 @@ export const Buttons = () => {
   return (
     <div>
       <div className="buttons">
+        <a
+          className="d"
+          href="https://study.com/academy/lesson/history-of-money-lesson-for-kids.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={playMP3}
+        >
+          History
+        </a>
 
-      <a
+        <a
           className="b"
           href="https://www.pleblab.com/"
           target="_blank"

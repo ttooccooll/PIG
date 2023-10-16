@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './PdfModal.css';
 
 function PdfModal() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -19,6 +18,7 @@ function PdfModal() {
   return (
     <div>
       <span
+        className='x'
         role="link"
         tabIndex={0}
         onClick={() => openModal()}
@@ -27,13 +27,6 @@ function PdfModal() {
             openModal();
           }
         }}
-        style={{
-          color: 'aqua',
-          cursor: 'default',
-          textDecoration: 'none',
-          fontSize: 'small',
-          opacity: 1,
-        }}
         onMouseEnter={(e) => {
           e.target.style.opacity = '0.6';
         }}
@@ -41,23 +34,19 @@ function PdfModal() {
           e.target.style.opacity = '1';
         }}
       >
-        FAQ
+        Statistics
       </span>
 
       {modalOpen && (
         <div className="modal-overlay" onClick={() => closeModal()}>
           <div className="modal-content-centered" >
+           <getPrice />
             X
             <span className="close" onClick={() => closeModal()}>
               &times;
             </span>
             <div className="modal-inner">
-              <img
-                src={`${process.env.PUBLIC_URL}/TNGFAQ.png`}
-                alt="FAQ"
-                className="full-height-image"
-                style={{ border: '1px solid white' }}
-              />
+              <getPrice />
             </div>
           </div>
         </div>

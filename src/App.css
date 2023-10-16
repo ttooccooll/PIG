@@ -49,7 +49,7 @@ header {
 }
 
 h1 {
-  margin: 48px 0px 0px 220px;
+  margin: 46px 0px 0px 220px;
   font-size: 32px;
   font-weight: bold;
   width: 250px;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  margin: 18px 0px 0px 225px;
+  margin: 19px 0px 0px 225px;
   font-family: 'MyFontc';
   font-size: 25px;
   font-weight: lighter;
@@ -69,9 +69,9 @@ h2 {
   color: rgb(255, 0, 0);
   padding-top: 2px;
   text-align: center;
-  border: 10px double #6a3816; /* Set the double border */
+  border: 10px double #6a3816;
   border-radius: 10px;
-  box-shadow: 0 0 0 1px black, 0 0 0 1px black; /* Add an outer and inner shadow for the black outline */
+  box-shadow: 0 0 0 1px black, 0 0 0 2px black;
 }
 
 

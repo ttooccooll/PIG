@@ -19,6 +19,7 @@ function App() {
   const [balance, setBalance] = useState(null);
   const [chartData, setChartData] = useState(null);
   const [transactions, setTransactions] = useState([]);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const playMP3 = () => {
     const audio = new Audio("/tng_swoosh_clean.mp3");
@@ -109,6 +110,10 @@ function App() {
     const priceInterval = setInterval(() => {
       getPrice();
     }, 1000);
+
+      const timeInterval = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
   
     const walletAndTransactionsInterval = setInterval(() => {
       getWalletBalance();
@@ -118,6 +123,7 @@ function App() {
     return () => {
       clearInterval(priceInterval);
       clearInterval(walletAndTransactionsInterval);
+      clearInterval(timeInterval);
     };
   }, []);
   
@@ -129,7 +135,7 @@ function App() {
           Lucy's Piggie Bank
         </h1>
         <h2>
-          8:50 AM
+          {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </h2>
         <div className="row">
         <div className="balance-card">
