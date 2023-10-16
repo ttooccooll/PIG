@@ -128,6 +128,9 @@ function App() {
         <h1>
           Lucy's Piggie Bank
         </h1>
+        <h2>
+          8:50 AM
+        </h2>
         <div className="row">
         <div className="balance-card">
           <p style={{ fontSize: '40px' }}>{balance}</p>

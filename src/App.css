@@ -13,6 +13,12 @@
   src: url('BemirsDemoVersionRegular-L360Z.ttf') format('truetype');
 }
 
+
+@font-face {
+  font-family: 'MyFontc';
+  src: url('alarm clock.ttf') format('truetype');
+}
+
 body {
   font-family: 'MyFont';
   background: linear-gradient(to right, #893701, #76360b 100%);
@@ -53,6 +59,22 @@ h1 {
   color: transparent;
 }
 
+h2 {
+  margin: 18px 0px 0px 225px;
+  font-family: 'MyFontc';
+  font-size: 25px;
+  font-weight: lighter;
+  width: 180px;
+  background: black;
+  color: rgb(255, 0, 0);
+  padding-top: 2px;
+  text-align: center;
+  border: 10px double #6a3816; /* Set the double border */
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px black, 0 0 0 1px black; /* Add an outer and inner shadow for the black outline */
+}
+
+
 .balance-card {
   position: relative;
   background: linear-gradient(to right, rgba(211, 146, 77, 0.6) 0%, rgba(187, 122, 117, 0.4) 50%, rgba(183, 141, 107, 0.6) 100%);
@@ -61,7 +83,7 @@ h1 {
   border-color: #000000;
   width: 170px;
   height: 120px;
-  margin-top: 90px;
+  margin-top: 15px;
   margin-left: 450px;
   border-radius: 200px;
   padding: 2%;
@@ -100,7 +122,7 @@ h1 {
   height: 60px;
   overflow: hidden;
   white-space: nowrap;
-  margin: 310px 10px 5px 10px;
+  margin: 315px 10px 5px 10px;
   background: linear-gradient(to right, rgba(118, 54, 11, 0.5) 0%, rgba(206, 151, 18, .3) 50%, rgba(137, 55, 1, 0.5) 100%);
   position: relative;
   display: flex;
