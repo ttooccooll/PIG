@@ -122,6 +122,37 @@ function App() {
     };
   }, []);
   
+  const [audio, setAudio] = useState(null);
+
+  const playMP3 = () => {
+    const newAudio = new Audio("/80s-alarm-clock-sound.mp3");
+    newAudio.volume = 0.1;
+    newAudio.loop = true;
+    newAudio.play();
+    setAudio(newAudio);
+  };
+
+  const stopMP3 = () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+
+  const playMP4 = () => {
+    const newAudio = new Audio("/oink-40664.mp3");
+    newAudio.volume = 0.1;
+    newAudio.loop = true;
+    newAudio.play();
+    setAudio(newAudio);
+  };
+
+  const stopMP4 = () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
 
   return (
     <div className="App">
@@ -129,13 +160,13 @@ function App() {
         <h1>
           Lucy's Piggie Bank
         </h1>
-        <h2>
+        <h2 onMouseEnter={playMP3} onMouseLeave={stopMP3} >
           {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </h2>
         <div className="row">
         <div className="balance-card">
-          <p style={{ fontSize: '40px' }}>{balance}</p>
-          <p style={{ fontSize: '35px' }}>sats</p>
+          <p style={{ fontSize: '40px' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >{balance}</p>
+          <p style={{ fontSize: '35px' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >sats</p>
         </div>
         <Buttons />
         </div>
