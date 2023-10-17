@@ -21,11 +21,6 @@ function App() {
   const [transactions, setTransactions] = useState([]);
   const [currentTime, setCurrentTime] = useState(new Date());
 
-  const playMP3 = () => {
-    const audio = new Audio("/tng_swoosh_clean.mp3");
-    audio.play();
-  };
-
   const apiKey = process.env.REACT_APP_X_API_KEY;
 
   const getPrice = () => {

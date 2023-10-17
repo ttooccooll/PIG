@@ -3,7 +3,7 @@ import "./Buttons.css";
 import PaymentsModal from "./PaymentsModal";
 
 const playMP3 = () => {
-  const audio = new Audio("/computerbeep_8.mp3");
+  const audio = new Audio("/pg10.mp3");
   audio.play();
 };
 
@@ -18,7 +18,7 @@ export const Buttons = () => {
       <div className="buttons">
         <a
           className="d"
-          href="https://study.com/academy/lesson/history-of-money-lesson-for-kids.html"
+          href="https://www.youtube.com/shorts/zApydIPKFfI"
           target="_blank"
           rel="noopener noreferrer"
           onClick={playMP3}

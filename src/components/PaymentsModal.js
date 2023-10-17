@@ -14,12 +14,12 @@ const PaymentsModal = ({ modalState, setModalState }) => {
   const [invoice, setInvoice] = useState("");
 
   const playMP3 = () => {
-    const audio = new Audio("/tng_warp7.mp3");
+    const audio = new Audio("/oink-40664.mp3");
     audio.play();
   };
 
   const playMP4 = () => {
-    const audio = new Audio("/computerbeep_69.mp3");
+    const audio = new Audio("/put-away-book.mp3");
     audio.play();
   };
 

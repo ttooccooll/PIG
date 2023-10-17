@@ -57,6 +57,8 @@ h1 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  transform: 'rotate(-45deg)';
+  transform-origin: 'bottom center';
 }
 
 h2 {
