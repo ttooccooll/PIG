@@ -11,14 +11,25 @@ form {
   font-family: 'MyFont';
   font-size: 25px;
   color: fuchsia;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
 }
 
 form {
   width: 100%;
+  animation-name: animatetop;
+  animation-duration: 1s
 }
 
 form .button {
   margin: 10% auto;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 section h6 {
@@ -34,6 +45,8 @@ section h6 {
   align-items: center;
   justify-content: center;
   margin: 5px;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 section p {
@@ -43,6 +56,8 @@ section p {
   color: orange;
   margin: 10px;
   position: relative;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 .close-button {
@@ -53,6 +68,8 @@ section p {
   color: rgb(197, 255, 73);
   padding: 0;
   margin: 0;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }
 
 .qr-code-container {
@@ -61,4 +78,6 @@ section p {
   align-items: center;
   color: rgb(25, 48, 149);
   font-size: large;
+  animation-name: animatetop;
+  animation-duration: 0.4s
 }

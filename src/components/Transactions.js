@@ -18,15 +18,15 @@ export const Transactions = ({ transactions }) => {
       <div key={tx.checking_id} className="rosie">
         {tx.amount > 0 ? (
           <>
-            <p className="t">Deposit - {tx.bolt11.substring(0, 30)}</p>
+            <p className="t">Deposit - {tx.bolt11.substring(0, 7)}...</p>
             <p className="t">+{tx.amount / 1000} sats</p>
-            <p className="t">Date: {formattedDate}</p>
+            <p className="q">Date: {formattedDate}</p>
           </>
         ) : (
           <>
-            <p className="t">Withdrawal - {tx.bolt11.substring(0, 30)}</p>
+            <p className="t">Withdrawal - {tx.bolt11.substring(0, 7)}...</p>
             <p className="t">{tx.amount / 1000} sats</p>
-            <p className="t">Date: {formattedDate}</p>
+            <p className="q">Date: {formattedDate}</p>
           </>
         )}
       </div>

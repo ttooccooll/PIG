@@ -18,6 +18,16 @@ p.t {
   margin-left: 5px;
 }
 
+p.q {
+  padding: 10px 15px 5px 5px;
+  background: solid black;
+  white-space: nowrap;
+  font-family: "MyFontz";
+  font-size: 15px;
+  font-weight: 100;
+  margin-left: 5px;
+}
+
 .transaction-list {
   display: flex;
   flex-direction: row;

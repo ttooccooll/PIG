@@ -157,7 +157,7 @@ h2:hover {
 }
 
 .row-item h4 {
-  background: linear-gradient(to right, rgba(9, 70, 238, 0.7) 0%, rgba(9, 70, 238, 1) 50%, rgba(9, 70, 238, 0.7) 100%);
+  background: linear-gradient(to right, rgba(36, 90, 238, 0.7) 0%, rgb(71, 111, 219) 50%, rgba(35, 88, 233, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;
   margin-left: 10px;
@@ -170,7 +170,17 @@ h2:hover {
 
 .row-item p {
   padding-left: 3%;
-  background: linear-gradient(to right, rgba(212, 95, 16, 0.7) 0%, rgba(212, 95, 16, 1) 50%, rgba(212, 95, 16, 0.7) 100%);
+  background: linear-gradient(to right, rgba(212, 95, 16, 0.7) 0%, rgb(214, 110, 41) 50%, rgba(212, 95, 16, 0.7) 100%);
+  border-radius: 20px;
+  border: 2px solid #000000;
+  width: fit-content;
+  height: 20px;
+  font-weight: bold;
+}
+
+.row-item p.q{
+  padding-left: 3%;
+  background: linear-gradient(to right, rgba(8, 151, 41, 0.7) 0%, rgb(16, 212, 49) 50%, rgba(8, 151, 41, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;
   width: fit-content;
