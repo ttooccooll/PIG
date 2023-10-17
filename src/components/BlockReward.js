@@ -26,7 +26,7 @@ function BitcoinBlockReward() {
 
   return (
     <div>
-      <p className="total-btc">CBBR - {blockReward}</p>
+      <p className="total-btc">The current Bitcoin block reward is {blockReward}</p>
     </div>
   );
 }

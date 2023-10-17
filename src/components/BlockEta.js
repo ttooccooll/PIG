@@ -29,7 +29,7 @@ function BitcoinHashWin() {
 
   return (
     <div>
-      <p className="total-btc">NB - {hashWin}</p>
+      <p className="total-btc">The next block should be here in {hashWin} seconds</p>
     </div>
   );
 }

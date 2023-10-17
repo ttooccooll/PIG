@@ -4,13 +4,8 @@ import Buttons from "./components/Buttons";
 import Transactions from "./components/Transactions";
 import axios from "axios";
 import "./App.css";
-import BitcoinBlockHeight from './components/BlockHeight';
-import TotalBTC from './components/TotalBitcoin'
-import BitcoinDifficulty from './components/Difficulty'
 import PdfModal from './components/PdfModal';
 import WhitePaper from './components/WhitePaper';
-import BitcoinBlockReward from './components/BlockReward';
-import BitcoinHashWin from './components/BlockEta';
 
 function App() {
   // useState lets us store/update/pass data from inside of this component and also refresh the component when the data changes
@@ -154,8 +149,24 @@ function App() {
     }
   };
 
+  const playMP7 = () => {
+    const audio = new Audio("/pg10.mp3");
+    audio.play();
+  };
+
+  var elem = document.getElementById("everything");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
   return (
-    <div className="App">
+    <div className="App" id="everything">
       <div className="pigpic">
         <h1>
           Lucy's Piggie Bank
@@ -172,6 +183,15 @@ function App() {
         </div>
         <div className="bookgo">
           <PdfModal />
+          <div className="full" onClick={() => {
+            playMP7();
+            openFullscreen({
+              type: "receive",
+              open: true,
+            });
+          }}>
+            World Atlas
+          </div>
         </div>
         <div className="row">
           <div className="row-item">

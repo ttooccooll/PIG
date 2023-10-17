@@ -19,7 +19,7 @@ label {
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 120px;
+  margin-top: 122px;
   margin-right: -120px;
   width: 140px;
   height: 30px;
@@ -36,7 +36,7 @@ label {
   font-size: 1.2rem;
   font-family: 'MyFontb';
   font-weight: bold;
-  margin-top: 110px;
+  margin-top: 112px;
   margin-right: -65px;
   width: 155px;
   height: 27px;
@@ -54,7 +54,7 @@ label {
   font-size: 1.2rem;
   font-family: 'MyFontb';
   font-weight: bold;
-  margin-top: 117px;
+  margin-top: 119px;
   margin-right: -113px;
   width: 140px;
   height: 26px;
@@ -71,7 +71,7 @@ label {
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 111px;
+  margin-top: 113px;
   margin-right: -123px;
   width: 152px;
   height: 24px;
@@ -98,18 +98,20 @@ label {
 }
 
 .buttonq {
-  background: linear-gradient(to top, rgb(109, 155, 101, 1) 0%, rgba(247, 10, 186, 1) 50%, rgb(82, 69, 222, 1) 100%);
-  border: 5px double linear-gradient(to right, rgb(221, 43, 43, 1) 0%, rgb(144, 247, 10, 1) 50%, rgb(69, 163, 222, 1) 100%);;
+  background: linear-gradient(to top, rgb(155, 219, 143) 0%, rgba(247, 10, 186, 1) 50%, rgb(92, 77, 249) 100%);
+  border: 10px double linear-gradient(to right, rgb(241, 46, 46) 0%, rgb(144, 247, 10, 1) 50%, rgb(69, 163, 222, 1) 100%);;
   border-radius: 5px;
   font-size: 1.2rem;
   font-weight: bold;
   width: 100%;
-  color: burlywood;
+  color: rgb(239, 198, 145);
   text-decoration: dotted;
   margin: 5px 0 5px 0;
 }
 
 .buttonq:hover {
   cursor: pointer;
-  opacity: .7;
+  color: black;
+  opacity: .8;
+  transform: skew(4);
 }

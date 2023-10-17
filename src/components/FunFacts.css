@@ -1,15 +1,19 @@
 .total-btc {
-    font-size: 9vh;
-    padding: 1vh 1vh 1vh 0%;
-    color: white;
-    border-radius: 150vh;
-    width: 8vw;
-    opacity: .8;
-    margin: 0;
-    white-space: nowrap;
+    font-size: 50px;
+    color: rgb(159, 9, 152);
+    margin: 10px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    overflow: wrap;
+    justify-content: center;
+    align-items: center;
+    animation-name: animatetop;
+    animation-duration: 5s;
   }
   
   .total-btc:hover {
     cursor: default;
     opacity: 2;
+    transform: rotateX(15deg) rotateY(10deg) rotate3d(1, 1, 1, 15deg);
   }

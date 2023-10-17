@@ -71,6 +71,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
           right: "40%",
           bottom: "auto",
           backgroundColor: "black",
+          zIndex: 9999999999
         },
       }}
       contentLabel="Example Modal"

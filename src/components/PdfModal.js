@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import BitcoinBlockHeight from './BlockHeight';
 import TotalBTC from './TotalBitcoin'
 import BitcoinDifficulty from './Difficulty'
-import WhitePaper from './WhitePaper';
 import BitcoinBlockReward from './BlockReward';
 import BitcoinHashWin from './BlockEta';
 
@@ -11,13 +10,13 @@ function PdfModal() {
 
   const openModal = () => {
     setModalOpen(true);
-    const audioOpen = new Audio(`${process.env.PUBLIC_URL}/tng_drawer.mp3`);
+    const audioOpen = new Audio(`${process.env.PUBLIC_URL}/pg10.mp3`);
     audioOpen.play();
   };
 
   const closeModal = () => {
     setModalOpen(false);
-    const audioClose = new Audio(`${process.env.PUBLIC_URL}/computerbeep_69.mp3`);
+    const audioClose = new Audio(`${process.env.PUBLIC_URL}/put-away-book.mp3`);
     audioClose.play();
   };
 
@@ -55,8 +54,7 @@ function PdfModal() {
               <BitcoinBlockReward />
               <BitcoinDifficulty />
               <BitcoinHashWin />
-              <TotalBTC /> / 21000000
-              <WhitePaper></WhitePaper>
+              <TotalBTC />
             </div>
           </div>
         </div>

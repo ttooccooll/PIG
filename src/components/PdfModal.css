@@ -8,6 +8,7 @@
   font-size: 1rem;
   font-weight: bold;
   margin-top: 131px;
+  margin-left: 15px;
   width: 500px;
   color: inherit;
   text-decoration: inherit;
@@ -28,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .modal-content-centered {
@@ -40,22 +41,28 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 9999;
+  z-index: 99999;
   margin-top: 1%;
+}
+
+.modal-inner {
+  display: flex;
+  height: 90vh;
+  width: 90vw;
+  overflow: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  z-index: 999999;
 }
 
 .close {
   position: fixed;
+  cursor: pointer;
   top: 1%;
   right: 1%;
-  cursor: crosshair;
   font-size: 40px;
   z-index: 9999;
-  font-family: 'MyFont';
-  color: white;
-}
-
-.full-height-image {
-  max-height: 95vh;
-  width: auto;
+  color: rgb(159, 9, 152);
+  background-color: aqua;
+  font-family: "MyFont";
 }

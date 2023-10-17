@@ -41,11 +41,11 @@ header {
   background-image: url('./background.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 726px;
+  height: 727px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 1155px;
+  width: 1158px;
   border-radius: 20px;
   border-color: #000000;
   border-width: 2px;
@@ -159,7 +159,7 @@ h2:hover {
   height: 60px;
   overflow: hidden;
   white-space: nowrap;
-  margin: 88px 10px 5px 10px;
+  margin: 65px 10px 5px 10px;
   background: linear-gradient(to right, rgba(118, 54, 11, 0.5) 0%, rgba(206, 151, 18, .3) 50%, rgba(137, 55, 1, 0.5) 100%);
   position: relative;
   display: flex;
@@ -209,31 +209,45 @@ h2:hover {
   border-bottom: 1px solid black;
 }
 
-@media (max-width: 876px) {
-  .row-item {
-    width: 100%;
-  }
-
-  .balance-card {
-    width: 100%;
-    text-align: center;
-    margin-right: 2%;
-    margin-left: 2%;
-  }
+/* Safari */
+:-webkit-full-screen {
+  background: linear-gradient(to right, #893701, #76360b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
-@media (max-width: 615px) {
-  .row {
-    flex-direction: column;
-  }
+/* IE11 */
+:-ms-fullscreen {
+  background: linear-gradient(to right, #893701, #76360b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
 
-  .row-item {
-    margin-top: 1%;
-  }
+:fullscreen {
+  background: linear-gradient(to right, #893701, #76360b 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
 
-  .balance-card {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 1%;
-  }
+.full {
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 3px;
+  width: 500px;
+  color: inherit;
+  text-decoration: inherit;
+  font-family: "MyFontb";
+}
+
+.full:hover {
+  cursor: pointer;
+  opacity: .6;
 }
