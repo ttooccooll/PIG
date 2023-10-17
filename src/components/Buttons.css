@@ -83,12 +83,12 @@ label {
 
 .buttons button:hover {
   cursor: pointer;
-  opacity: 0.6;
+  transform: rotate(85deg);
 }
 
 .buttons a:hover {
   cursor: pointer;
-  opacity: 0.6;
+  transform: rotate(85deg);
 }
 
 @font-face {
@@ -110,5 +110,5 @@ label {
 
 .buttonq:hover {
   cursor: pointer;
-  opacity: 0.6;
+  transform: rotate(85deg);
 }
