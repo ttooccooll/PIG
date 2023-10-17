@@ -15,6 +15,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
 
   const playMP3 = () => {
     const audio = new Audio("/oink-40664.mp3");
+    audio.volume = 0.1;
     audio.play();
   };
 

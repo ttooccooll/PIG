@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import BitcoinBlockHeight from './BlockHeight';
+import TotalBTC from './TotalBitcoin'
+import BitcoinDifficulty from './Difficulty'
+import WhitePaper from './WhitePaper';
+import BitcoinBlockReward from './BlockReward';
+import BitcoinHashWin from './BlockEta';
 
 function PdfModal() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -18,7 +24,7 @@ function PdfModal() {
   return (
     <div>
       <span
-        className='x'
+        className='s'
         role="link"
         tabIndex={0}
         onClick={() => openModal()}
@@ -40,13 +46,17 @@ function PdfModal() {
       {modalOpen && (
         <div className="modal-overlay" onClick={() => closeModal()}>
           <div className="modal-content-centered" >
-           <getPrice />
             X
             <span className="close" onClick={() => closeModal()}>
               &times;
             </span>
             <div className="modal-inner">
-              <getPrice />
+              <BitcoinBlockHeight />
+              <BitcoinBlockReward />
+              <BitcoinDifficulty />
+              <BitcoinHashWin />
+              <TotalBTC /> / 21000000
+              <WhitePaper></WhitePaper>
             </div>
           </div>
         </div>

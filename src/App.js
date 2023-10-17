@@ -170,6 +170,9 @@ function App() {
         </div>
         <Buttons />
         </div>
+        <div className="bookgo">
+          <PdfModal />
+        </div>
         <div className="row">
           <div className="row-item">
             <Transactions transactions={transactions} />
