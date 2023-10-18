@@ -13,7 +13,6 @@ form {
   color: fuchsia;
   animation-name: animatetop;
   animation-duration: 1.5s;
-  z-index: 99999;
   position: relative;
 }
 

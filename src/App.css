@@ -56,14 +56,23 @@ header {
 h1 {
   margin: 45px 0px 0px 220px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 100;
   width: 250px;
-  background: linear-gradient(to right, rgb(255, 24, 139), black);
-  -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  color: hotpink;
   transform: 'rotate(-45deg)';
   transform-origin: 'bottom center';
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #3f3934, 0 0 20px #5b4f46, 0 0 30px #735a4a, 0 0 40px #9b6c4d, 0 0 50px #905935, 0 0 60px #86471d, 0 0 70px #76360b;
+  }
+  
+  to {
+    text-shadow: 0 0 20px black, 0 0 30px #210e00, 0 0 40px #391800, 0 0 50px #4f2100, 0 0 60px #562400, 0 0 70px #6d2b00, 0 0 80px #893701;
+  }
 }
 
 h2 {
@@ -78,8 +87,9 @@ h2 {
   text-align: center;
   border: 10px double #6a3816;
   border-radius: 10px;
-  box-shadow: 0 0 0 1px black, 0 0 0 2px black;
+  box-shadow: 0 0 0 1px black, 0 0 0 2px black, 0 0 0;
   transform: rotate(-1deg);
+  text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a, 0 0 22px #e40808;
 }
 
 h2:hover {

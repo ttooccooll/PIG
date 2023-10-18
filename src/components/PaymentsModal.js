@@ -71,7 +71,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
           right: "40%",
           bottom: "auto",
           backgroundColor: "black",
-          zIndex: 9999999999
+          zindex: 9999999999
         },
       }}
       contentLabel="Example Modal"
@@ -85,7 +85,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       </p>
       {/* If it is a receive */}
       {modalState.type === "receive" && (
-        <form zIndex="9999999999" >
+        <form zindex="9999999999" >
           <label>enter amount in sats</label>
           <input
             type="number"
