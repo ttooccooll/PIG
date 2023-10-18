@@ -94,7 +94,7 @@ function App() {
     getPrice();
     getWalletBalance();
     getTransactions();
-  }, [getPrice]);
+  }, []);
 
   useEffect(() => {
     const priceInterval = setInterval(() => {
