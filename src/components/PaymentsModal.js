@@ -85,7 +85,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       </p>
       {/* If it is a receive */}
       {modalState.type === "receive" && (
-        <form>
+        <form zIndex="9999999999" >
           <label>enter amount in sats</label>
           <input
             type="number"
@@ -105,7 +105,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
         <section>
           <h6>Invoice created</h6>
           <div className="qr-code-container">
-            <QRCode value={invoice} size={198} fgColor="aqua" bgColor="#brown" />
+            <QRCode value={invoice} size={198} fgColor="aqua" bgColor="#brown" zIndex="9999999999" />
           </div>
           <p>{invoice}</p>
         </section>
