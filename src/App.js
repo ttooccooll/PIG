@@ -17,6 +17,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
 
   const apiKey = process.env.REACT_APP_X_API_KEY;
+  const nameKey = process.env.REACT_APP_NAME_KEY;
 
   const getPrice = () => {
     axios
@@ -170,15 +171,15 @@ function openFullscreen() {
     <div className="App" id="everything">
       <div className="pigpic">
         <h1>
-          Lucy's Piggie Bank
+          {nameKey}'s Piggie Bank
         </h1>
         <h2 onMouseEnter={playMP3} onMouseLeave={stopMP3} >
           {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </h2>
         <div className="row">
         <div className="balance-card">
-          <p style={{ fontSize: '40px' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >{balance}</p>
-          <p style={{ fontSize: '35px' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >sats</p>
+          <p style={{ fontSize: '40px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >{balance}</p>
+          <p style={{ fontSize: '35px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >sats</p>
         </div>
         <Buttons />
         </div>

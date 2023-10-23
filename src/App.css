@@ -54,25 +54,17 @@ header {
 }
 
 h1 {
-  margin: 45px 0px 0px 220px;
-  font-size: 32px;
-  font-weight: 100;
+  margin: 25px 0px 0px 220px;
+  font-family: 'MyFonth';
+  font-size: 30px;
+  font-weight: 600;
   width: 250px;
+  height: 56px;
   background-clip: text;
   color: hotpink;
   transform: 'rotate(-45deg)';
   transform-origin: 'bottom center';
-  animation: glow 4s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #3f3934, 0 0 20px #5b4f46, 0 0 30px #735a4a, 0 0 40px #9b6c4d, 0 0 50px #905935, 0 0 60px #86471d, 0 0 70px #76360b;
-  }
-  
-  to {
-    text-shadow: 0 0 20px black, 0 0 30px #210e00, 0 0 40px #391800, 0 0 50px #4f2100, 0 0 60px #562400, 0 0 70px #6d2b00, 0 0 80px #893701;
-  }
+  text-shadow: 0 0 25px black, 0 0 35px #210e00, 0 0 40px #391800, 0 0 50px #4f2100, 0 0 60px #562400, 0 0 70px #6d2b00, 0 0 80px #893701;
 }
 
 h2 {
@@ -113,10 +105,11 @@ h2:hover {
 
 .balance-card {
   position: relative;
-  background: linear-gradient(to right, rgba(211, 146, 77, 0.6) 0%, rgba(187, 122, 117, 0.4) 50%, rgba(183, 141, 107, 0.6) 100%);
+  background: linear-gradient(to right, rgba(132, 57, 4, 0.4) 0%, rgba(80, 13, 0, 0.3) 50%, rgba(132, 57, 4, 0.4) 100%);
   border: solid;
   border-width: 2px;
   border-color: #000000;
+  color: #210e00;
   width: 170px;
   height: 120px;
   margin-top: 15px;
@@ -130,8 +123,18 @@ h2:hover {
   align-items: center;
   align-self: center;
   justify-self: center;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(49, 32, 31, 0.4), 0 0 30px rgba(76, 58, 44, 0.6), 0 0 40px rgba(90, 62, 33, 0.6), 0 0 50px rgba(97, 66, 33, 0.6);
-  box-shadow: inset 0 0 10px rgba(5, 5, 5, 1); /* Add an inset box shadow for the fading effect */
+  box-shadow: inset 0 0 15px rgb(49, 8, 0), 0 0 5px rgb(87, 32, 6); /* Add an inset box shadow for the fading effect */
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgb(49, 8, 0), 0 0 50px rgb(95, 38, 8);
+  }
+  
+  to {
+    text-shadow: 0 0 20px rgba(132, 80, 12), 0 0 50px rgb(125, 64, 14);
+  }
 }
 
 .balance-card p:hover {
@@ -143,9 +146,10 @@ h2:hover {
   font-size: 2em;
   font-weight: bold;
   font-family: 'MyFontz';
-  border-color: #000000;
+  border-color: #2b1603;
+  color: #2b1603;;
   margin: 0;
-  opacity: .7;
+  opacity: 1;
 }
 
 .bookgo {
@@ -267,6 +271,6 @@ h2:hover {
   z-index: 1;
 }
 
-.modal {
+.Buttons {
   z-index: 9999999;
 }
