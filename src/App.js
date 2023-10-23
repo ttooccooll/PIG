@@ -163,6 +163,7 @@ function openFullscreen() {
   } else if (elem.msRequestFullscreen) {
     elem.msRequestFullscreen();
   }
+  document.getElementById("everything").classList.add("fullscreen-mode");
 }
 
   return (

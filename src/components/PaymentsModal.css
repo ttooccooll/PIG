@@ -21,13 +21,6 @@ form {
   to {transform:scale(1)}
 }
 
-form {
-  width: 100%;
-  animation-name: animatetop;
-  animation-duration: 1.5s;
-  z-index: 99999;
-}
-
 form .button {
   margin: 10% auto;
   animation-name: animatetop;

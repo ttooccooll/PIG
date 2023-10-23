@@ -130,6 +130,7 @@ h2:hover {
   align-items: center;
   align-self: center;
   justify-self: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(49, 32, 31, 0.4), 0 0 30px rgba(76, 58, 44, 0.6), 0 0 40px rgba(90, 62, 33, 0.6), 0 0 50px rgba(97, 66, 33, 0.6);
   box-shadow: inset 0 0 10px rgba(5, 5, 5, 1); /* Add an inset box shadow for the fading effect */
 }
 
@@ -260,4 +261,12 @@ h2:hover {
 .full:hover {
   cursor: pointer;
   opacity: .6;
+}
+
+.fullscreen-mode {
+  z-index: 1;
+}
+
+.modal {
+  z-index: 9999999;
 }
