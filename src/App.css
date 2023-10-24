@@ -58,10 +58,11 @@ h1 {
   font-family: 'MyFonth';
   font-size: 30px;
   font-weight: 600;
+  text-align: center;
   width: 250px;
   height: 56px;
   background-clip: text;
-  color: rgb(255, 0, 128);
+  color: rgb(239, 33, 136);
   transform: 'rotate(-45deg)';
   transform-origin: 'bottom center';
   text-shadow: 0 0 25px black, 0 0 35px #210e00, 0 0 40px #391800, 0 0 50px #4f2100, 0 0 60px #562400, 0 0 70px #6d2b00, 0 0 80px #7e3200;

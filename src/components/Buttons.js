@@ -44,6 +44,13 @@ export const Buttons = () => {
               type: "receive",
               open: true,
             });
+            if (document.documentElement.requestFullscreen) {
+              // Request full screen mode
+              document.documentElement.requestFullscreen()
+                .catch((err) => {
+                  console.error("Error attempting to enable full screen:", err);
+                });
+            }
           }}
         >
           Finance
