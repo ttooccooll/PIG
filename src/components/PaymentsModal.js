@@ -83,7 +83,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       >
         X
       </p>
-      {/* If it is a receive */}
+
       {modalState.type === "receive" && (
         <form zindex="9999999999" >
           <label>enter amount in sats</label>

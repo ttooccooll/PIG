@@ -65,4 +65,12 @@
   color: rgb(159, 9, 152);
   background-color: aqua;
   font-family: "MyFont";
+  animation-name: animatetop;
+  animation-duration: 5s;
+}
+
+.close:hover {
+  cursor: default;
+  opacity: 2;
+  transform: rotateX(15deg) rotateY(10deg) rotate3d(1, 1, 1, 15deg);
 }
