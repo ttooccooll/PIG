@@ -67,7 +67,7 @@
   background-color: aqua;
   font-family: "MyFont";
   animation-name: animatetop;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
 .close:hover {
