@@ -55,7 +55,7 @@ header {
 
 h1 {
   margin: 25px 0px 0px 220px;
-  font-family: 'MyFonth';
+  font-family: 'MyFontz';
   font-size: 30px;
   font-weight: 600;
   text-align: center;
@@ -80,7 +80,7 @@ h2 {
   text-align: center;
   border: 10px double #6a3816;
   border-radius: 10px;
-  box-shadow: 0 0 0 1px black, 0 0 0 2px black, 0 0 0;
+  box-shadow: 0 0 0 1px black, 0 0 0 2px black, 7px -2px 12px 4px #391800;
   transform: rotate(-1deg);
   text-shadow: 0 0 3px #b43434, 0 0 7px rgb(195, 41, 41), 0 0 12px #be1a1a, 0 0 22px #e40808;
 }
@@ -124,8 +124,8 @@ h2:hover {
   align-items: center;
   align-self: center;
   justify-self: center;
-  box-shadow: inset 0 0 15px rgb(49, 8, 0), 0 0 5px rgb(87, 32, 6);
-  text-shadow: 0 0 20px rgb(49, 8, 0), 0 0 50px rgb(87, 32, 6);
+  box-shadow: inset 0 0 15px #451d03, 0 0 5px rgb(87, 32, 6);
+  text-shadow: 0 0 25px #451d03, 0 0 15px rgb(87, 32, 6);
 }
 
 .balance-card p:hover {
@@ -179,7 +179,7 @@ h2:hover {
   border-radius: 20px;
   border: 2px solid #000000;
   margin-left: 10px;
-  font-family: "MyFonth";
+  font-family: "MyFontz";
   font-size: 20px;
   width: fit-content;
   height: 20px;
