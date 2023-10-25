@@ -156,7 +156,6 @@ h2:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .row-item {
@@ -185,6 +184,7 @@ h2:hover {
   width: fit-content;
   height: 20px;
   align-self: center;
+  justify-self: center;
   padding: 10px 15px 5px 15px;
 }
 
@@ -197,6 +197,7 @@ h2:hover {
   height: 20px;
   font-weight: bold;
   align-self: center;
+  justify-self: center;
 }
 
 .row-item p.q{
@@ -208,6 +209,7 @@ h2:hover {
   height: 20px;
   font-weight: bold;
   align-self: center;
+  justify-self: center;
 }
 
 .transaction .transaction-amount {
