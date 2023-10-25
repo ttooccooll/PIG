@@ -14,23 +14,25 @@
 }
 
 p.t {
-  padding: 10px 15px 5px 5px;
+  padding: 6px 15px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
   margin-left: 5px;
+  text-align: center;
 }
 
 p.q {
-  padding: 10px 15px 5px 5px;
+  padding: 6px 15px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
   margin-left: 5px;
+  text-align: center;
 }
 
 .transaction-list {
