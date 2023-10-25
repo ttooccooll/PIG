@@ -17,7 +17,8 @@ label {
   background: linear-gradient(to top, rgba(214, 122, 0) 0%, rgba(251, 173, 7, 1) 50%, rgba(175, 80, 1) 100%);
   border: 2px solid #000000;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 20px;
+  text-shadow: 0 0 1px #000000;
   font-weight: bold;
   margin-top: 121px;
   margin-right: -120px;
@@ -33,7 +34,8 @@ label {
   background: linear-gradient(to top, rgba(247, 10, 186) 0%, rgb(145, 21, 79) 50%, rgb(110, 8, 56) 100%);
   border: 2px solid #000000;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 21px;
+  text-shadow: 0 0 1px #000000;
   font-family: 'MyFontb';
   font-weight: bold;
   margin-top: 111px;
@@ -51,7 +53,8 @@ label {
   background: linear-gradient(to top, rgba(75, 116, 74) 0%, rgba(199, 210, 22) 50%, rgb(44, 81, 45) 100%);
   border: 2px solid #000000;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 19px;
+  text-shadow: 0 0 1px #000000;
   font-family: 'MyFontb';
   font-weight: bold;
   margin-top: 118px;
@@ -69,7 +72,8 @@ label {
   background: linear-gradient(to top, rgb(46, 40, 161) 0%, rgb(12, 149, 198) 50%, rgb(99, 17, 162) 100%);
   border: 2px solid #000000;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 18px;
+  text-shadow: 0 0 1px #000000;
   font-weight: bold;
   margin-top: 113px;
   margin-right: -123px;
