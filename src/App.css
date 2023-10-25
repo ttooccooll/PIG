@@ -172,6 +172,16 @@ h2:hover {
   justify-content: center;
   align-items: center;
   align-self: flex-end;
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
+  ::-webkit-scrollbar-thumb {
+    display: none;
+  }
 }
 
 .row-item h4 {
