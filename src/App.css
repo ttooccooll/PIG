@@ -59,6 +59,7 @@ h1 {
   font-size: 25px;
   font-weight: 600;
   text-align: center;
+  line-height: 35px;
   width: 250px;
   height: 56px;
   background-clip: text;
@@ -134,7 +135,6 @@ h2:hover {
 }
 
 .balance-card p {
-  font-size: 2em;
   font-weight: bold;
   font-family: 'MyFontz';
   border-color: #2b1603;
