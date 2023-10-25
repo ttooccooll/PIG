@@ -5,7 +5,8 @@
 
 .s {
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 17px;
+  text-shadow: 0 0 1px #000000;
   font-weight: bold;
   margin-top: 131px;
   margin-left: 15px;
