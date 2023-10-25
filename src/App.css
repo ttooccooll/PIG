@@ -62,7 +62,7 @@ h1 {
   width: 250px;
   height: 56px;
   background-clip: text;
-  color: rgb(239, 33, 136);
+  color: rgb(255, 0, 128);
   transform: 'rotate(-45deg)';
   transform-origin: 'bottom center';
   text-shadow: 0 0 25px black, 0 0 35px #210e00, 0 0 40px #391800, 0 0 50px #4f2100, 0 0 60px #562400, 0 0 70px #6d2b00, 0 0 80px #7e3200;
@@ -119,23 +119,13 @@ h2:hover {
   padding: 2%;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Change to 'hidden' for the shadow effect */
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   align-self: center;
   justify-self: center;
-  box-shadow: inset 0 0 15px rgb(49, 8, 0), 0 0 5px rgb(87, 32, 6); /* Add an inset box shadow for the fading effect */
-  animation: glow 3s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 20px rgb(49, 8, 0), 0 0 50px rgb(95, 38, 8);
-  }
-  
-  to {
-    text-shadow: 0 0 20px rgba(132, 80, 12), 0 0 50px rgb(125, 64, 14);
-  }
+  box-shadow: inset 0 0 15px rgb(49, 8, 0), 0 0 5px rgb(87, 32, 6);
+  text-shadow: 0 0 20px rgb(49, 8, 0), 0 0 50px rgb(87, 32, 6);
 }
 
 .balance-card p:hover {
@@ -205,6 +195,7 @@ h2:hover {
   width: fit-content;
   height: 20px;
   font-weight: bold;
+  align-self: center;
 }
 
 .row-item p.q{
@@ -215,6 +206,7 @@ h2:hover {
   width: fit-content;
   height: 20px;
   font-weight: bold;
+  align-self: center;
 }
 
 .transaction .transaction-amount {
