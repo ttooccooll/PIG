@@ -16,10 +16,10 @@ label {
 .button {
   background: linear-gradient(to top, rgba(214, 122, 0) 0%, rgba(251, 173, 7, 1) 50%, rgba(175, 80, 1) 100%);
   border: 2px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 122px;
+  margin-top: 121px;
   margin-right: -120px;
   width: 140px;
   height: 30px;
@@ -32,11 +32,11 @@ label {
 .a {
   background: linear-gradient(to top, rgba(247, 10, 186) 0%, rgb(145, 21, 79) 50%, rgb(110, 8, 56) 100%);
   border: 2px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1.2rem;
   font-family: 'MyFontb';
   font-weight: bold;
-  margin-top: 112px;
+  margin-top: 111px;
   margin-right: -65px;
   width: 155px;
   height: 27px;
@@ -50,11 +50,11 @@ label {
 .b {
   background: linear-gradient(to top, rgba(75, 116, 74) 0%, rgba(199, 210, 22) 50%, rgb(44, 81, 45) 100%);
   border: 2px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1.2rem;
   font-family: 'MyFontb';
   font-weight: bold;
-  margin-top: 119px;
+  margin-top: 118px;
   margin-right: -113px;
   width: 140px;
   height: 26px;
@@ -68,7 +68,7 @@ label {
 .d {
   background: linear-gradient(to top, rgb(46, 40, 161) 0%, rgb(12, 149, 198) 50%, rgb(99, 17, 162) 100%);
   border: 2px solid #000000;
-  border-radius: 5px;
+  border-radius: 4px;
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 113px;
