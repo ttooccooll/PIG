@@ -20,14 +20,14 @@ export const Transactions = ({ transactions }) => {
           <>
             <p className="u">Deposit - {tx.bolt11.substring(0, 7)}...</p>
             <p className="t">+{tx.amount / 1000} sats</p>
-            <p className="r">+{tx.memo} </p>
+            <p className="r">{tx.memo} </p>
             <p className="q">Date: {formattedDate}</p>
           </>
         ) : (
           <>
             <p className="u">Withdrawal - {tx.bolt11.substring(0, 7)}...</p>
-            <p className="t">{tx.amount / 1000} sats</p>
-            <p className="r">+{tx.memo} </p>
+            <p className="t">-{tx.amount / 1000} sats</p>
+            <p className="r">{tx.memo} </p>
             <p className="q">Date: {formattedDate}</p>
           </>
         )}
