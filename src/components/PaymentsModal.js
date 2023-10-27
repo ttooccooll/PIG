@@ -37,8 +37,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
     const data = {
       amount: formData.amount,
       out: false,
-      // ToDo: Add additional form for user to be able to customize the memo
-      memo: "LNBits",
+      memo: formData.memo,
     };
     axios
       .post("https://48f31a1603.d.voltageapp.io/api/v1/payments", data, { headers })
@@ -69,7 +68,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
           top: "10%",
           left: "40%",
           right: "40%",
-          bottom: "auto",
+          bottom: "10%",
           backgroundColor: "black",
           zindex: 9999999999
         },
@@ -94,6 +93,16 @@ const PaymentsModal = ({ modalState, setModalState }) => {
             onChange={(e) =>
               setFormData({ ...formData, amount: e.target.value })
             }
+          />
+          <label>enter a message</label>
+          <input
+            type="text"
+            placeholder="enter memo"
+            value={formData.memo}
+            onChange={(e) =>
+              setFormData({ ...formData, memo: e.target.value })
+            }
+            defaultValue="I forgot to write a message."
           />
           <button className="buttonq" onClick={(e) => { handleReceive(e); playMP3(); }}>
             Deposit
