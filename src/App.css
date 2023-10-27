@@ -197,7 +197,7 @@ h2:hover {
   border-radius: 20px;
   border: 2px solid #000000;
   margin-left: 10px;
-  margin-right: 90px;
+  margin-right: 10px;
   font-family: "MyFontz";
   font-size: 20px;
   width: fit-content;
@@ -208,7 +208,6 @@ h2:hover {
 }
 
 .row-item p {
-  padding-left: 3%;
   background: linear-gradient(to right, rgba(212, 95, 16, 0.7) 0%, rgb(214, 110, 41) 50%, rgba(212, 95, 16, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;
@@ -220,7 +219,6 @@ h2:hover {
 }
 
 .row-item p.u {
-  padding-left: 3%;
   background: linear-gradient(to right, rgba(212, 16, 52, 0.7) 0%, rgb(214, 41, 73) 50%, rgba(212, 16, 49, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;
@@ -232,7 +230,6 @@ h2:hover {
 }
 
 .row-item p.q{
-  padding-left: 3%;
   background: linear-gradient(to right, rgba(8, 151, 41, 0.7) 0%, rgb(16, 212, 49) 50%, rgba(8, 151, 41, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;
@@ -244,7 +241,6 @@ h2:hover {
 }
 
 .row-item p.r{
-  padding-left: 3%;
   background: linear-gradient(to right, rgba(113, 8, 151, 0.7) 0%, rgb(163, 16, 212) 50%, rgba(144, 8, 151, 0.7) 100%);
   border-radius: 20px;
   border: 2px solid #000000;

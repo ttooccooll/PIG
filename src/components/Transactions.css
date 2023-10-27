@@ -14,47 +14,47 @@
 }
 
 p.t {
-  padding: 6px 15px 6px 5px;
+  padding: 6px 5px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
-  margin-left: 5px;
+  margin-left: 3px;
   text-align: center;
 }
 
 p.u {
-  padding: 6px 15px 6px 5px;
+  padding: 6px 5px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
-  margin-left: 5px;
+  margin-left: 3px;
   text-align: center;
 }
 
 p.q {
-  padding: 6px 15px 6px 5px;
+  padding: 6px 5px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
-  margin-left: 5px;
-  margin-right: 150px;
+  margin-left: 3px;
+  margin-right: 10px;
   text-align: center;
 }
 
 p.r {
-  padding: 6px 15px 6px 5px;
+  padding: 6px 5px 6px 5px;
   background: solid black;
   white-space: nowrap;
   font-family: "MyFontz";
   font-size: 20px;
   font-weight: 100;
-  margin-left: 5px;
+  margin-left: 3px;
   text-align: center;
 }
 
