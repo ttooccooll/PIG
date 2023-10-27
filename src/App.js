@@ -185,7 +185,7 @@ function openFullscreen() {
         <Buttons />
         </div>
         <div className="hungry">
-          <img src={process.env.PUBLIC_URL + "/hungry.png"} alt="" style={{ width: "120px" }} />
+          <img src={process.env.PUBLIC_URL + "/hungry.png"} alt="" style={{ width: "120px", opacity:.7 }} />
         </div>
         <div className="bookgo">
           <Bio />
