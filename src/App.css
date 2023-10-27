@@ -143,8 +143,19 @@ h2:hover {
   opacity: 1;
 }
 
+.hungry {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  z-index: 3;
+  margin-top: 30px;
+}
+
 .bookgo {
-  margin-top: 209px;
+  margin-top: 59px;
   margin-left: 895px;
   width: 500px;
 }
@@ -165,7 +176,7 @@ h2:hover {
   height: 60px;
   overflow: hidden;
   white-space: nowrap;
-  margin: 65px 10px 5px 10px;
+  margin: 38px 10px 5px 10px;
   background: linear-gradient(to right, rgba(118, 54, 11, 0.5) 0%, rgba(206, 151, 18, .3) 50%, rgba(137, 55, 1, 0.5) 100%);
   position: relative;
   display: flex;
@@ -263,6 +274,7 @@ h2:hover {
   text-shadow: 0 0 1px #000000;
   font-weight: bold;
   margin-top: 2px;
+  margin-left: 20px;
   width: 500px;
   color: inherit;
   text-decoration: inherit;
