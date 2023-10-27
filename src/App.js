@@ -6,6 +6,7 @@ import axios from "axios";
 import "./App.css";
 import PdfModal from './components/PdfModal';
 import WhitePaper from './components/WhitePaper';
+import Bio from './components/Bio'
 
 function App() {
   // useState lets us store/update/pass data from inside of this component and also refresh the component when the data changes
@@ -183,7 +184,11 @@ function openFullscreen() {
         </div>
         <Buttons />
         </div>
+        <div className="hungry">
+          <img src={process.env.PUBLIC_URL + "/hungry.png"} alt="" style={{ width: "120px" }} />
+        </div>
         <div className="bookgo">
+          <Bio />
           <PdfModal />
           <div className="full" onClick={() => {
             playMP7();
