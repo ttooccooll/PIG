@@ -172,7 +172,7 @@ function openFullscreen() {
     <div className="App" id="everything">
       <div className="pigpic">
         <h1>
-          {nameKey}'s Piggie Bank
+          {nameKey}'s Piggy Bank
         </h1>
         <h2 onMouseEnter={playMP3} onMouseLeave={stopMP3} >
           {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
