@@ -70,7 +70,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
           right: "40%",
           bottom: "10%",
           backgroundColor: "black",
-          zindex: 9999999999
+          zindex: 9999999999999
         },
       }}
       contentLabel="Example Modal"
