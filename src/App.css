@@ -154,8 +154,8 @@ h2:hover {
 }
 
 .bookgo {
-  margin-top: 59px;
-  margin-left: 895px;
+  margin-top: 36px;
+  margin-left: 896px;
   width: 500px;
 }
 
@@ -289,7 +289,8 @@ h2:hover {
 .full {
   border-radius: 5px;
   font-size: 15px;
-  text-shadow: 0 0 1px #000000;
+  color: #76360b;
+  text-shadow: 0 0 1px #b76e0f;
   font-weight: bold;
   margin-top: 2px;
   margin-left: 20px;

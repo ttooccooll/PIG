@@ -5,7 +5,7 @@ import Transactions from "./components/Transactions";
 import axios from "axios";
 import "./App.css";
 import PdfModal from './components/PdfModal';
-import WhitePaper from './components/WhitePaper';
+import LnModal from './components/LNmodal';
 import Bio from './components/Bio'
 
 function App() {
@@ -190,6 +190,7 @@ function openFullscreen() {
         <div className="bookgo">
           <Bio />
           <PdfModal />
+          <LnModal />
           <div className="full" onClick={() => {
             playMP7();
             openFullscreen({
