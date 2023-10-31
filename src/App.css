@@ -27,9 +27,8 @@
 body {
   font-family: 'MyFont';
   background: linear-gradient(to right, #893701, #76360b 100%);
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -51,6 +50,13 @@ header {
   border-width: 2px;
   border-style: solid;
   margin-top: 1vh;
+}
+
+#thisisit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -257,33 +263,6 @@ h2:hover {
 
 .transaction-amount {
   border-bottom: 1px solid black;
-}
-
-/* Safari */
-:-webkit-full-screen {
-  background: linear-gradient(to right, #893701, #76360b 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-/* IE11 */
-:-ms-fullscreen {
-  background: linear-gradient(to right, #893701, #76360b 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-:fullscreen {
-  background: linear-gradient(to right, #893701, #76360b 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-  position: relative;
 }
 
 .full {

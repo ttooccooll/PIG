@@ -41,12 +41,6 @@ const Buttons = () => {
             e.preventDefault();
             playMP3();
             openModal(1);
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen()
-                .catch((err) => {
-                  console.error("Error attempting to enable full screen:", err);
-                });
-            }
           }}
         >
           Biography

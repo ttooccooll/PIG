@@ -53,12 +53,6 @@ const Buttons = () => {
             e.preventDefault();
             playMP3();
             openModal(1);
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen()
-                .catch((err) => {
-                  console.error("Error attempting to enable full screen:", err);
-                });
-            }
           }}
         >
           History
@@ -71,12 +65,6 @@ const Buttons = () => {
             e.preventDefault();
             playMP3();
             openModal(2);
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen()
-                .catch((err) => {
-                  console.error("Error attempting to enable full screen:", err);
-                });
-            }
           }}
         >
           Latin
@@ -90,12 +78,6 @@ const Buttons = () => {
               type: "receive",
               open: true,
             });
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen()
-                .catch((err) => {
-                  console.error("Error attempting to enable full screen:", err);
-                });
-            }
           }}
         >
           Finance
@@ -108,12 +90,6 @@ const Buttons = () => {
             e.preventDefault();
             playMP3();
             openModal(3);
-            if (document.documentElement.requestFullscreen) {
-              document.documentElement.requestFullscreen()
-                .catch((err) => {
-                  console.error("Error attempting to enable full screen:", err);
-                });
-            }
           }}
         >
           Math
