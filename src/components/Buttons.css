@@ -18,7 +18,7 @@ label {
   border: 2px solid #000000;
   border-radius: 4px;
   font-size: 20px;
-  text-shadow: 0 0 1px #000000;
+  text-shadow: 0 0 2px #000000;
   font-weight: bold;
   margin-top: 121px;
   margin-right: -120px;
@@ -38,7 +38,7 @@ label {
   border: 2px solid #000000;
   border-radius: 4px;
   font-size: 21px;
-  text-shadow: 0 0 1px #000000;
+  text-shadow: 0 0 1px #de620f;
   font-family: 'MyFontb';
   font-weight: bold;
   margin-top: 111px;
@@ -65,7 +65,7 @@ label {
   margin-right: -113px;
   width: 140px;
   height: 26px;
-  color: inherit;
+  color: rgb(12, 64, 15);
   text-decoration: inherit;
   display: flex;
   justify-content: space-around;
@@ -84,7 +84,7 @@ label {
   margin-right: -123px;
   width: 152px;
   height: 24px;
-  color: inherit;
+  color: rgb(101, 8, 8);
   text-decoration: inherit;
   transform: rotate(90deg);
   font-family: "MyFontb";

@@ -156,21 +156,9 @@ function App() {
     audio.play();
   };
 
-  var elem = document.getElementById("everything");
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) {
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) {
-    elem.msRequestFullscreen();
-  }
-  document.getElementById("everything").classList.add("fullscreen-mode");
-}
-
   return (
     <div className="App" id="everything">
-      <div className="pigpic">
+      <div className="pigpic" id="thisisit">
         <h1>
           {nameKey}'s Piggy Bank
         </h1>
@@ -193,10 +181,13 @@ function openFullscreen() {
           <LnModal />
           <div className="full" onClick={() => {
             playMP7();
-            openFullscreen({
-              type: "receive",
-              open: true,
-            });
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen()
+                .catch((err) => {
+                  console.error("Error attempting to enable full screen:", err);
+                  document.getElementById("everything").classList.add("fullscreen-mode");
+                });
+            }
           }}>
             World Atlas
           </div>
