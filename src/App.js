@@ -187,8 +187,8 @@ function App() {
                   console.error("Error attempting to enable full screen:", err);
                   document.getElementById("everything").classList.add("fullscreen-mode");
                 });
-            }
-          }}>
+              }
+            }}>
             World Atlas
           </div>
         </div>
