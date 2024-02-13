@@ -4,15 +4,9 @@ import Buttons from "./components/Buttons";
 import Transactions from "./components/Transactions";
 import axios from "axios";
 import "./App.css";
-import VideoPlayer from './components/VideoPlayer';
-import AudioPlayerComponent from './components/AudioPlayer';
-import BitcoinBlockHeight from './components/BlockHeight';
-import TotalBTC from './components/TotalBitcoin'
-import BitcoinDifficulty from './components/Difficulty'
 import PdfModal from './components/PdfModal';
-import WhitePaper from './components/WhitePaper';
-import BitcoinBlockReward from './components/BlockReward';
-import BitcoinHashWin from './components/HashWin';
+import LnModal from './components/LNmodal';
+import Bio from './components/Bio'
 
 function App() {
   // useState lets us store/update/pass data from inside of this component and also refresh the component when the data changes
@@ -21,51 +15,44 @@ function App() {
   const [balance, setBalance] = useState(null);
   const [chartData, setChartData] = useState(null);
   const [transactions, setTransactions] = useState([]);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
-  const playMP3 = () => {
-    const audio = new Audio("/tng_swoosh_clean.mp3");
-    audio.play();
-  };
+  const apiKey = process.env.REACT_APP_X_API_KEY;
+  const nameKey = process.env.REACT_APP_NAME_KEY;
 
   const getPrice = () => {
-    // Axios is a library that makes it easy to make http requests
-    // After we make a request, we can use the .then() method to handle the response asychronously
-    // This is an alternative to using async/await
     axios
       .get("https://api.coinbase.com/v2/prices/BTC-USD/spot")
-      // .then is a promise that will run when the API call is successful
       .then((res) => {
         const formattedPrice = Number(res.data.data.amount).toFixed(4)
         setPrice(formattedPrice);
         updateChartData(formattedPrice);
       })
-      // .catch is a promise that will run if the API call fails
       .catch((err) => {
         console.log(err);
       });
   };
 
   const getWalletBalance = () => {
-    // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
-      "X-Api-Key": "33d8516f5013403084bb9a0e60b4c61a",
+      "X-Api-Key": apiKey,
+      "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get("http://bigbadpc.local:3007/api/v1/wallet", { headers })
+      .get("https://48f31a1603.d.voltageapp.io/api/v1/wallet", { headers })
       .then((res) => {
-        // Divide our balance by 1000 since it is denominated in millisats
-        setBalance(res.data.balance / 1000);
+        setBalance(parseInt(res.data.balance / 1000));
       })
       .catch((err) => console.log(err));
   };
 
   const getTransactions = () => {
-    // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
-      "X-Api-Key": "33d8516f5013403084bb9a0e60b4c61a",
+      "X-Api-Key": apiKey,
+      "Access-Control-Allow-Origin": "*"
     };
     axios
-      .get("http://bigbadpc.local:3007/api/v1/payments", { headers })
+      .get("https://48f31a1603.d.voltageapp.io/api/v1/payments", { headers })
       .then((res) => {
         setTransactions(res.data);
       })
@@ -109,224 +96,107 @@ function App() {
     getPrice();
     getWalletBalance();
     getTransactions();
-  }, [getPrice]);
-
-  useEffect(() => {
-    // setInterval will run whatever is in the callback function every friggin second
-    const interval = setInterval(() => {
-      getPrice();
-      getWalletBalance();
-      getTransactions();
-    }, 1000);
-    return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const priceInterval = setInterval(() => {
+      getPrice();
+    }, 1000);
+
+      const timeInterval = setInterval(() => {
+        setCurrentTime(new Date());
+      }, 1000);
+  
+    const walletAndTransactionsInterval = setInterval(() => {
+      getWalletBalance();
+      getTransactions();
+    }, 5000);
+  
+    return () => {
+      clearInterval(priceInterval);
+      clearInterval(walletAndTransactionsInterval);
+      clearInterval(timeInterval);
+    };
+  }, []);
+  
+  const [audio, setAudio] = useState(null);
+
+  const playMP3 = () => {
+    const newAudio = new Audio("/80s-alarm-clock-sound.mp3");
+    newAudio.volume = 0.1;
+    newAudio.loop = true;
+    newAudio.play();
+    setAudio(newAudio);
+  };
+
+  const stopMP3 = () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+
+  const playMP4 = () => {
+    const newAudio = new Audio("/oink-40664.mp3");
+    newAudio.volume = 0.1;
+    newAudio.loop = true;
+    newAudio.play();
+    setAudio(newAudio);
+  };
+
+  const stopMP4 = () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+
+  const playMP7 = () => {
+    const audio = new Audio("/pg10.mp3");
+    audio.play();
+  };
+
   return (
-    <div className="App">
-      <header >
-        <h1 > BTC-1701-D -- United Federation of Sovereign Individuals </h1>
-      </header>
-      <div>
-       <AudioPlayerComponent autoplay={true} />
-      </div>
-      <div className="row">
-        <div className="button-holder-holder">
-          <div className="button-holder">
-            <Buttons />
-          </div>
-        </div>
-        <div className="button-next">
-          <div className="insidebutton-next"></div>
-        </div>
-        <div className="button-nextest">
-          <div className="insidebutton-nextest"></div>
-        </div>
-        <div className="button-nextestly">
-          <div className="insidebutton-nextestly"></div>
-        </div>
-        <div className="button-nextiest">
-          <div className="insidebutton-nextiest">
-            <p>
-              <a 
-              className="p"
-              href="https://mempool.space/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer">
-                MEM.SPC
-              </a>
-              <a 
-              className="p"
-              href="https://www.pleblab.com/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer">
-                P.Lab
-              </a>
-              <a 
-              className="p"
-              href="https://www.st-minutiae.com/resources/rulesofacquisition.html"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer">
-                R0A
-              </a>
-              <a 
-              className="p"
-              href="https://bitfeed.live/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer">
-                BIT.LIV
-              </a>
-              <div>
-              <WhitePaper />
-              </div>
-              <a 
-              className="p"
-              href="https://lnvisualizer.com/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer">
-                LN-VIS
-              </a>
-              <a 
-              className="p"
-              href="https://bitcoinexplorer.org/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="element"non-breaking-word>
-                BTC-EXP
-              </a>
-              <a 
-              className="p"
-              href="https://www.youtube.com/watch?v=sZt6eU5REN8"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="#D45F10">
-                12-25-2364
-              </a>
-              <div>
-              <PdfModal />
-              </div>
-              <a 
-              className="p"
-              href="https://nakamotoinstitute.org/cypherpunk-manifesto/"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="#D45F10">
-                03-09-93
-              </a>
-              <a 
-              className="p"
-              href="https://www.youtube.com/watch?v=YRyioZK6BOc"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="#D45F10">
-                5.P0T
-              </a>
-              <a 
-              className="p"
-              href="https://1ml.com/statistics"
-              onClick={playMP3}
-              target="_blank"
-              rel="noopener noreferrer"
-              color="#D45F10">
-                LN.1ML
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="row">
+    <div className="App" id="everything">
+      <div className="pigpic" id="thisisit">
+        <h1>
+          {nameKey}'s Piggy Bank
+        </h1>
+        <h2 onMouseEnter={playMP3} onMouseLeave={stopMP3} >
+          {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+        </h2>
+        <div className="row">
         <div className="balance-card">
-          <div className="balance-content">
-            <h2>Satoshis</h2>
-            <p>{balance}</p>
+          <p style={{ fontSize: '40px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >{balance}</p>
+          <p style={{ fontSize: '35px', fontStyle: '#2b1603' }} onMouseEnter={playMP4} onMouseLeave={stopMP4} >sats</p>
+        </div>
+        <Buttons />
+        </div>
+        <div className="hungry">
+          <img src={process.env.PUBLIC_URL + "/hungry.png"} alt="" style={{ width: "120px", opacity:.7 }} />
+        </div>
+        <div className="bookgo">
+          <Bio />
+          <PdfModal />
+          <LnModal />
+          <div className="full" onClick={() => {
+            playMP7();
+            if (document.documentElement.requestFullscreen) {
+              document.documentElement.requestFullscreen()
+                .catch((err) => {
+                  console.error("Error attempting to enable full screen:", err);
+                  document.getElementById("everything").classList.add("fullscreen-mode");
+                });
+              }
+            }}>
+            World Atlas
           </div>
         </div>
-        <div className="balance-card">
-          <div className="balance-content">
-              <h2>USD-BTC</h2>
-              <p>{price}</p>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="row-item">
-          <div className="row-itemer">
+        <div className="row">
+          <div className="row-item">
             <Transactions transactions={transactions} />
           </div>
         </div>
-        <div className="row-itemz">
-          <Chart chartData={chartData} />
-        </div>
-      </div>
-      <div className="mostprefooter">
-        <div className="inside-footer">
-         <div class="content-container">
-          <ul>
-            {chartData &&
-              chartData.map((dataPoint, index) => (
-                <li key={index}>
-                  {new Date(dataPoint.x).toLocaleString('en-US', { hour12: false }).replace(/\//g, '.')}, USD-BTC: {dataPoint.y}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="moreprefooter">
-        <div className="inside-footer">
-          <div class="content-container">
-            <ul>
-              {chartData &&
-                chartData.map((dataPoint, index) => (
-                  <li key={index}>
-                    Stardate {new Date(dataPoint.x).toLocaleString('en-US', { hour12: false }).replace(/\//g, '.')}, USD-BTC: {dataPoint.y}
-                  </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="prefooter">
-        <div className="inside-footer">
-          <div class="content-container">
-            <ul>
-              {chartData &&
-                chartData.map((dataPoint, index) => (
-                  <li key={index}>
-                    Stardate {new Date(dataPoint.x).toLocaleString('en-US', { hour12: false }).replace(/\//g, '.')}, USD-BTC: {dataPoint.y}
-                  </li>
-                ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <h5>
-          <p><BitcoinBlockHeight /></p>
-          <p><TotalBTC /></p>
-          <p><BitcoinBlockReward /></p>
-          <p><BitcoinHashWin /></p>
-          <p className="right">
-            <BitcoinDifficulty />
-          </p>
-        </h5>
-      </footer>
-      <div className="yessir">
-        <h3>
-        <div className="video-container" autoplay="true" >
-          <VideoPlayer />
-        </div>
-        <p> - click for sound - - - - - - - - - - click for - </p>
-        <PdfModal />
-        </h3>
       </div>
     </div>
   );

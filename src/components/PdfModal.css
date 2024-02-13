@@ -1,6 +1,23 @@
 @font-face {
   font-family: 'MyFont';
-  src: url('Sterilict-L3aen.ttf') format('truetype');
+  src: url('Cookiemonster-gv11.ttf') format('truetype');
+}
+
+.s {
+  border-radius: 5px;
+  font-size: 17px;
+  text-shadow: 0 0 1px #000000;
+  font-weight: bold;
+  margin-top: 131px;
+  margin-left: 15px;
+  width: 500px;
+  color: rgb(98, 1, 1);
+  text-decoration: inherit;
+  font-family: "MyFontb";
+}
+
+.s:hover {
+  cursor: pointer;
 }
 
 .modal-overlay {
@@ -9,38 +26,54 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure it appears above other content */
+  z-index: 99999;
 }
 
-/* Styles for the modal content */
 .modal-content-centered {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 2000px;
+  padding: 100%;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  position: relative;
+  position: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  z-index: 9999; /* Ensure it appears above other content */
+  z-index: 99999;
+  margin-top: 1%;
 }
 
-/* Close button styles */
+.modal-inner {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  width: 90vw;
+  overflow: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  z-index: 999999;
+}
+
 .close {
   position: fixed;
+  cursor: pointer;
   top: 1%;
   right: 1%;
-  cursor: crosshair;
   font-size: 40px;
   z-index: 9999;
-  font-family: 'MyFont';
-  color: white;
+  color: rgb(159, 9, 152);
+  background-color: aqua;
+  font-family: "MyFont";
+  animation-name: animatetop;
+  animation-duration: 3s;
 }
 
-/* Styles for the full-height image */
-.full-height-image {
-  max-height: 80vh;
-  width: auto;
+.close:hover {
+  cursor: default;
+  opacity: 2;
+  transform: rotateX(15deg) rotateY(10deg) rotate3d(1, 1, 1, 15deg);
 }

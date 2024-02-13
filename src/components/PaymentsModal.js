@@ -12,61 +12,35 @@ const PaymentsModal = ({ modalState, setModalState }) => {
   });
   // Our state for storing the invoice we created to be paid
   const [invoice, setInvoice] = useState("");
-  // Our state for the invoice we paid
-  const [paymentInfo, setPaymentInfo] = useState({
-    paymentHash: "",
-    checkingId: "",
-  });
 
   const playMP3 = () => {
-    const audio = new Audio("/tng_warp7.mp3");
+    const audio = new Audio("/oink-40664.mp3");
+    audio.volume = 0.1;
     audio.play();
   };
 
   const playMP4 = () => {
-    const audio = new Audio("/computerbeep_69.mp3");
+    const audio = new Audio("/put-away-book.mp3");
     audio.play();
   };
 
-  const handleSend = (e) => {
-    // Keep the page from refreshing when the form is submitted
-    e.preventDefault();
-
-    const headers = {
-      "X-Api-Key": "33d8516f5013403084bb9a0e60b4c61a",
-    };
-    const data = {
-      bolt11: formData.invoiceToPay,
-      out: true,
-    };
-    axios
-      .post("http://bigbadpc.local:3007/api/v1/payments", data, { headers })
-      .then((res) =>
-        setPaymentInfo({
-          paymentHash: res.data.payment_hash,
-          checkingId: res.data.checking_id,
-        })
-      )
-      .catch((err) => console.log(err));
-
-    return;
-  };
+  const apiKey = process.env.REACT_APP_X_API_KEY;
 
   const handleReceive = (e) => {
     // Keep the page from refreshing when the form is submitted
     e.preventDefault();
 
     const headers = {
-      "X-Api-Key": "33d8516f5013403084bb9a0e60b4c61a",
+      "X-Api-Key": apiKey,
+      "Access-Control-Allow-Origin": "*"
     };
     const data = {
       amount: formData.amount,
       out: false,
-      // ToDo: Add additional form for user to be able to customize the memo
-      memo: "LNBits",
+      memo: formData.memo,
     };
     axios
-      .post("http://bigbadpc.local:3007/api/v1/payments", data, { headers })
+      .post("https://48f31a1603.d.voltageapp.io/api/v1/payments", data, { headers })
       .then((res) => setInvoice(res.data.payment_request))
       .catch((err) => console.log(err));
 
@@ -80,10 +54,6 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       open: false,
     });
     setInvoice("");
-    setPaymentInfo({
-      paymentHash: "",
-      checkingId: "",
-    });
     setFormData({
       amount: 0,
       invoiceToPay: "",
@@ -95,11 +65,12 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       isOpen={modalState.open}
       style={{
         content: {
-          top: "20%",
+          top: "10%",
           left: "40%",
           right: "40%",
-          bottom: "auto",
+          bottom: "10%",
           backgroundColor: "black",
+          zindex: 9999999999999
         },
       }}
       contentLabel="Example Modal"
@@ -111,26 +82,10 @@ const PaymentsModal = ({ modalState, setModalState }) => {
       >
         X
       </p>
-      {/* If it is a send */}
-      {modalState.type === "send" && (
-        <form>
-          <label>invoice coordinates</label>
-          <input
-            type="text"
-            value={formData.invoiceToPay}
-            onChange={(e) =>
-              setFormData({ ...formData, invoiceToPay: e.target.value })
-            }
-          />
-          <button className="button" onClick={(e) => { handleSend(e); playMP3(); }}>
-            Engage
-          </button>
-        </form>
-      )}
-      {/* If it is a receive */}
+
       {modalState.type === "receive" && (
-        <form>
-          <label>enter amount</label>
+        <form zindex="9999999999" >
+          <label>enter amount in sats</label>
           <input
             type="number"
             min="0"
@@ -139,8 +94,18 @@ const PaymentsModal = ({ modalState, setModalState }) => {
               setFormData({ ...formData, amount: e.target.value })
             }
           />
-          <button className="button" onClick={(e) => { handleReceive(e); playMP3(); }}>
-            Engage
+          <label>enter a message</label>
+          <input
+            type="text"
+            placeholder="enter memo"
+            value={formData.memo}
+            onChange={(e) =>
+              setFormData({ ...formData, memo: e.target.value })
+            }
+            defaultValue="I forgot to write a message."
+          />
+          <button className="buttonq" onClick={(e) => { handleReceive(e); playMP3(); }}>
+            Deposit
           </button>
         </form>
       )}
@@ -149,17 +114,9 @@ const PaymentsModal = ({ modalState, setModalState }) => {
         <section>
           <h6>Invoice created</h6>
           <div className="qr-code-container">
-            <QRCode value={invoice} size={128} fgColor="#000" bgColor="#fff" />
+            <QRCode value={invoice} size={198} fgColor="aqua" bgColor="#brown" zIndex="9999999999" />
           </div>
           <p>{invoice}</p>
-        </section>
-      )}
-      {/* If we are displaying the status of our successful payment */}
-      {paymentInfo.paymentHash && (
-        <section>
-          <h6>Payment sent</h6>
-          <p>Payment hash: {paymentInfo.paymentHash}</p>
-          <p>Checking id: {paymentInfo.checkingId}</p>
         </section>
       )}
     </Modal>

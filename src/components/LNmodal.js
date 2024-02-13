@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import BitcoinBlockHeight from './BlockHeight';
-import TotalBTC from './TotalBitcoin'
-import BitcoinDifficulty from './Difficulty'
-import BitcoinBlockReward from './BlockReward';
-import BitcoinHashWin from './BlockEta';
-import './PdfModal.css';
+import QRCode from 'qrcode.react';
+import "./PdfModal.css";
 
-function PdfModal() {
+const lnurlKey = process.env.REACT_APP_LNURL_KEY;
+
+function LnModal() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -26,6 +24,7 @@ function PdfModal() {
       <span
         className='s'
         role="link"
+        color='red'
         tabIndex={0}
         onClick={() => openModal()}
         onKeyPress={(e) => {
@@ -40,22 +39,21 @@ function PdfModal() {
           e.target.style.opacity = '1';
         }}
       >
-        Statistics
+        Life Skills
       </span>
 
       {modalOpen && (
         <div className="modal-overlay" onClick={() => closeModal()}>
           <div className="modal-content-centered" >
             X
-            <span className="close" onClick={() => closeModal()}>
+            <span className="total-btc1" onClick={() => closeModal()}>
               &times;
             </span>
-            <div className="modal-inner">
-              <BitcoinBlockHeight />
-              <BitcoinBlockReward />
-              <BitcoinDifficulty />
-              <BitcoinHashWin />
-              <TotalBTC />
+            <div className="total-btc2">
+                <QRCode value={lnurlKey} size={300} />
+            </div>
+            <div className="total-btc1">
+                {lnurlKey}
             </div>
           </div>
         </div>
@@ -64,4 +62,4 @@ function PdfModal() {
   );
 }
 
-export default PdfModal;
+export default LnModal;

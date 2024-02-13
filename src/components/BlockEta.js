@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./FunFacts.css";
+//this is no longer hashes to win. It's the time until the next block//
 
 function BitcoinHashWin() {
   const [hashWin, setHashWin] = useState(null);
@@ -8,9 +9,11 @@ function BitcoinHashWin() {
   useEffect(() => {
     const getHashWin = () => {
       axios
-        .get('https://blockchain.info/q/hashestowin')
+        .get('https://blockchain.info/q/eta')
         .then((res) => {
-          setHashWin(res.data);
+          const hashWin = parseFloat(res.data);
+          const roundedHashWin = hashWin.toFixed(4);
+          setHashWin(roundedHashWin);
         })
         .catch((err) => {
           console.log(err);
@@ -19,14 +22,14 @@ function BitcoinHashWin() {
 
     getHashWin();
 
-    const intervalId = setInterval(getHashWin, 60000);
+    const intervalId = setInterval(getHashWin, 12000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div>
-      <p className="total-btc">HW - {hashWin}</p>
+      <p className="total-btc">The next block should be here in {hashWin} seconds</p>
     </div>
   );
 }

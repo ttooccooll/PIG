@@ -29,7 +29,7 @@ function TotalBitcoin() {
 
   return (
     <div>
-      <p className="total-btc">TBC - {totalBTC}</p>
+      <p className="total-btc">The total amount of bitcoin in circulation is {totalBTC} out of 21000000</p>
     </div>
   );
 }

@@ -19,14 +19,14 @@ function BitcoinBlockReward() {
 
     getBlockReward();
 
-    const intervalId = setInterval(getBlockReward, 600000);
+    const intervalId = setInterval(getBlockReward, 10000000000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
     <div>
-      <p className="total-btc">CBBR - {blockReward}</p>
+      <p className="total-btc">The current Bitcoin block reward is {blockReward}</p>
     </div>
   );
 }

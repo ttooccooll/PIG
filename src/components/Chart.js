@@ -19,7 +19,6 @@ const Chart = ({ chartData }) => {
   return (
     <div className="chart-container">
       {chartData && chartData.length <= 1 ? (
-        // ToDo: Add a loading spinner
         <p>Loading</p>
       ) : (
         <LineChart
@@ -33,7 +32,7 @@ const Chart = ({ chartData }) => {
           hideXLabel={true}
           xDisplay={(timestamp) => {
             const options = {
-              hour12: false, // Use 24-hour format
+              hour12: false,
               hour: "2-digit",
               minute: "2-digit",
               second: "2-digit",

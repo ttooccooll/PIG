@@ -32,6 +32,7 @@ function PdfModal() {
           color: 'aqua',
           cursor: 'default', // Change cursor to pointer on hover
           textDecoration: 'none',
+          fontSize: 'small',
           opacity: 1, // Set the initial opacity
         }}
         onMouseEnter={(e) => {
@@ -55,8 +56,8 @@ function PdfModal() {
               <iframe
                 src={`${process.env.PUBLIC_URL}/bitcoin.pdf`}
                 title="PDF Viewer"
-                width="1000px"
-                height="1000px" // Adjust the height as needed
+                width="500px"
+                height="700px"
               ></iframe>
             </div>
           </div>

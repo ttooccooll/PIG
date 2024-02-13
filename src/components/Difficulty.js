@@ -24,9 +24,9 @@ function BitcoinDifficulty() {
   }, []);
 
   return (
-    <p>
-      security-status - {difficulty}
-    </p>
+    <div>
+      <p className="total-btc"> The current difficult adjustment is {difficulty} </p>
+    </div>
   );
 }
 

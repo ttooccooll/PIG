@@ -26,7 +26,7 @@ function BitcoinBlockHeight() {
 
   return (
     <div>
-      <p className="total-btc">CBBH - {blockHeight}</p>
+      <p className="total-btc">The current Bitcoin block height is {blockHeight}</p>
     </div>
   );
 }
