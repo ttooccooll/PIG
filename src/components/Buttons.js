@@ -60,7 +60,7 @@ const Buttons = () => {
 
         <a
           className="b"
-          href="https://www.pleblab.com/"
+          href="https://www.plebdevs.com/"
           onClick={(e) => {
             e.preventDefault();
             playMP3();
