@@ -127,7 +127,7 @@ const Buttons = () => {
         <iframe
           title="yup"
           style={{ width: "80vw", height: "80vh" }}
-          src="https://www.pleblab.com/"
+          src="https://www.plebdevs.com/"
           allowFullScreen
         ></iframe>
         <button onClick={() => closeModal(2)}>X</button>
