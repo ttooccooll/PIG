@@ -4,7 +4,10 @@ Grab your admin key from an LNBITS wallet and plug it in your environment variab
 
 Big thanks to plebdevs.com and their plebdev course, where I learned how to make lightning wallets!
 
-demo: 
+demo: https://www.youtube.com/watch?v=XkNXfkQlpdY
+
+My copy of the piggy bank if you want to play around with it: https://piglnbits.vercel.app/
+(Do NOT send sats here unless you intend to give them to me!)
 
 enjoy,  
 jason  
