@@ -291,3 +291,40 @@ h2:hover {
 .Buttons {
   z-index: 9999999;
 }
+
+@media (max-width: 1140px) {
+  #thisisit {
+    margin: 0;
+    position: relative;
+    left: 0%;
+    transform: scale(.8);
+    align-self: center;
+  }
+  body {
+    background: #893701;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 845px) {
+  #thisisit {
+    margin: 0;
+    position: relative;
+    top: -50%;
+    left: -50%;
+    transform: scale(.37);
+  }
+  body {
+    background: #893701;
+    display: flex;
+    width: 667px;
+    height: 375px;
+    overflow: hidden;
+  }
+  #everything {
+    width: 667px;
+    height: 375px;
+    overflow: hidden;
+  }
+}
